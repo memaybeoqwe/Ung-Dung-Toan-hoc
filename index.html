@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ứng dụng Toán học Thực tế</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #fff1f2;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(135deg, #fca5a5, #f87171);
+      color: #7f1d1d;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin-bottom: 8px;
+      font-size: 32px;
+    }
+    header p {
+      font-size: 16px;
+    }
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #b91c1c;
+    }
+    .problem {
+      margin-bottom: 35px;
+      padding: 20px;
+      border-radius: 15px;
+      background: #fff5f5;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    button {
+      background: #f87171;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      background: #ef4444;
+      transform: translateY(-2px);
+    }
+    .solution {
+      margin-top: 15px;
+      padding: 15px 20px;
+      background: #ffe4e6;
+      border-left: 6px solid #f43f5e;
+      border-radius: 10px;
+      display: none;
+      color: #7f1d1d;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #9f1239;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ứng dụng Toán học lớp 12 – Học kì II</h1>
+    <p>Toán học gắn với thực tiễn – Phân tích chi tiết – Vận dụng hiệu quả</p>
+  </header>
+
+  <main>
+    <!-- PHẦN I: GIỚI THIỆU -->
+    <div class="problem">
+      <h2>I. Giới thiệu</h2>
+      <p>
+        Toán học lớp 12 học kì II cung cấp nhiều công cụ quan trọng như tích phân,
+        hàm mũ – logarit, số phức và xác suất. Những kiến thức này không chỉ phục vụ
+        cho các kì thi mà còn có giá trị ứng dụng cao trong thực tiễn đời sống,
+        kinh tế, kỹ thuật và sản xuất.
+      </p>
+      <p>
+        Trang web này được xây dựng nhằm:
+      </p>
+      <ul>
+        <li>Minh họa <strong>ứng dụng thực tế</strong> của Toán học 12 kì II</li>
+        <li>Rèn luyện khả năng <strong>phân tích – trình bày lời giải</strong></li>
+        <li>Giúp học sinh <strong>vận dụng kiến thức</strong> vào các tình huống đời sống</li>
+      </ul>
+    </div>
+
+    <!-- PHẦN II: NỘI DUNG BÀI TOÁN -->
+    <div class="problem">
+      <h2>II. Các bài toán ứng dụng</h2>
+      <p>
+        Dưới đây là các bài toán tiêu biểu thuộc chương trình Toán 12 học kì II,
+        được xây dựng gắn với các tình huống thực tế và trình bày lời giải chi tiết.
+      </p>
+    </div>
+    <!-- TOÁN 12 KỲ 2 – PHÂN TÍCH CHI TIẾT -->
+
+    <div class="problem">
+      <h2>Bài toán 1: Ứng dụng tích phân – Quãng đường chuyển động</h2>
+      <p>
+        Một ô tô chuyển động thẳng với vận tốc phụ thuộc thời gian t (giờ) cho bởi hàm số:
+        <strong>v(t) = 3t² + 2t</strong> (km/h). Hãy tính quãng đường ô tô đi được trong
+        3 giờ đầu tiên.
+      </p>
+      <button onclick="toggleSolution('s1')">Xem lời giải chi tiết</button>
+      <div class="solution" id="s1">
+        <p>
+          <strong>Bước 1:</strong> Theo vật lý, quãng đường đi được trong khoảng thời gian [a;b]
+          được tính bằng tích phân của vận tốc:<br>
+          S = ∫<sub>a</sub><sup>b</sup> v(t) dt.<br><br>
+          <strong>Bước 2:</strong> Áp dụng với bài toán:<br>
+          S = ∫<sub>0</sub><sup>3</sup> (3t² + 2t) dt.<br><br>
+          <strong>Bước 3:</strong> Tính tích phân:<br>
+          ∫3t² dt = t³ ; &nbsp; ∫2t dt = t².<br>
+          ⇒ S = [t³ + t²]<sub>0</sub><sup>3</sup> = (27 + 9) − 0 = <strong>36 (km)</strong>.<br><br>
+          <em>Ý nghĩa thực tế:</em> Tích phân giúp xác định quãng đường khi vận tốc thay đổi –
+          ứng dụng trong giao thông, kỹ thuật, vật lý.
+        </p>
+      </div>
+    </div>
+
+    <div class="problem">
+      <h2>Bài toán 2: Hàm mũ – logarit – Lãi suất ngân hàng</h2>
+      <p>
+        Một người gửi <strong>50 triệu đồng</strong> vào ngân hàng với lãi suất
+        <strong>7%/năm</strong>, hình thức <strong>lãi kép</strong>. Hỏi sau 5 năm,
+        người đó nhận được bao nhiêu tiền?
+      </p>
+      <button onclick="toggleSolution('s2')">Xem lời giải chi tiết</button>
+      <div class="solution" id="s2">
+        <p>
+          <strong>Bước 1:</strong> Công thức lãi kép:<br>
+          A = P(1 + r)<sup>n</sup>.<br><br>
+          <strong>Bước 2:</strong> Xác định các đại lượng:<br>
+          P = 50 (triệu đồng), r = 0,07, n = 5.<br><br>
+          <strong>Bước 3:</strong> Thay vào công thức:<br>
+          A = 50 × (1,07)<sup>5</sup> ≈ 50 × 1,4026 ≈ <strong>70,1 (triệu đồng)</strong>.<br><br>
+          <em>Ý nghĩa thực tế:</em> Hàm mũ – logarit được dùng để tính lãi suất,
+          tăng trưởng dân số, sự phân rã phóng xạ.
+        </p>
+      </div>
+    </div>
+
+    <
